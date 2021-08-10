@@ -1,0 +1,130 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(52, 79, 16, 0.5);
+  padding: 60px 50px 66px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+  }
+  &__nav-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 148px;
+  }
+  &__nav {
+    display: flex;
+    gap: 40px;
+  }
+  &__nav-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 23px;
+
+    color: $color-background;
+    transition: opacity 0.2s linear;
+    &:hover {
+      transform: scale(1.02);
+      opacity: 0.6;
+    }
+  }
+  &__copyright {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+
+    color: $color-background;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__info-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration: none;
+
+    color: $color-background;
+    transition: 0.1s linear;
+    &:hover {
+      transform: scale(1.01);
+      opacity: 0.6;
+    }
+
+  }
+  &__icon-wrap {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: transform 0.3s linear;
+    &:hover {
+      transform: rotate(-360deg);
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 560px) and (max-width:850px) {
+  .footer {
+    padding: 29px 27px 49px;
+    &__nav {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__info-item,
+    &__nav-link,
+    &__copyright {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__icon-wrap {
+      position: absolute;
+      left: 27px;
+      top: 150px;
+    }
+  }
+}
+
+@media (max-width:559px) {
+  .footer {
+    padding: 29px 20px 60px;
+    &__container {
+      flex-direction: column  ;
+    }
+    &__nav {
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 90px;
+    }
+    &__info-item,
+    &__nav-link,
+    &__copyright {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__icon-wrap {
+      position: absolute;
+      left: 22px;
+      top: 150px;
+    }
+
+    &__copyright {
+      display: none;
+    }
+  }
+}

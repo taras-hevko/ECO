@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Maven Pro", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+body {
+  margin: 0 auto;
+  background-color: $color-background;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}

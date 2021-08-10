@@ -1,0 +1,235 @@
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 200px 150px;
+  &::before {
+    content: " ";
+    height: 1px;
+    width: 630px;
+    position: absolute;
+    top: 0;
+    right: 16%;
+    background: rgba(52, 79, 16, 0.5);
+  }
+  &__container {
+    max-width: 1280px;
+    width: 100%;
+  }
+  &__caption {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: rgba(52, 79, 16, 0.5);
+
+    transform: rotate(-90deg);
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: 50%;
+      right: 110%;
+
+      display: block;
+      height: 1px;
+      width: 100px;
+
+      background-color: rgba(52, 79, 16, 0.5);
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    max-width: 380px;
+    margin-right: 120px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $color-green;
+
+    margin-bottom: 20px;
+  }
+  &__text,
+  &__subtext {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-text;
+  }
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__subtext {
+    margin-bottom: 40px;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    padding-bottom: 12px;
+    width: 130px;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $color-green;
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 80px;
+      height: 1px;
+      background-color: $color-green;
+    }
+  }
+  &__link:hover {
+    transition: all 0.2s linear;
+    opacity: 0.5;
+  }
+  &__pre-photo {
+    position: absolute;
+    bottom: 0;
+    right: -30%;
+    align-self: flex-end;
+    transition: transform 0.3s linear;
+  }
+  &__photo {
+    transition: transform 0.3s linear;
+  }
+
+  &__wrapping-2 {
+    position: relative;
+    cursor: pointer;
+    &:hover .about__photo {
+      transform: translateX(-30px);
+    }
+    &:hover .about__pre-photo {
+      transform: translateX(-40px);
+    }
+  }
+}
+
+@media (min-width: 1345px)  and (max-width:1508px) {
+  .about {
+    padding-left: 27px;
+    padding-right: 0;
+    &__caption {
+      display: none;
+    }
+    &__info {
+      margin-right: 30px;
+    }
+    &__photo {
+      margin-right: 0;
+    }
+
+  }
+}
+
+@media (min-width: 926px)  and (max-width:1345px) {
+  .about {
+    padding-left: 27px;
+    padding-right: 0;
+    &__caption {
+      display: none;
+    }
+    &__info {
+      margin-right: 30px;
+    }
+    &__photo {
+      margin-right: 0;
+    }
+    &__pre-photo {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 925px) {
+  .about {
+    padding: 0 0 80px 27px;
+    &::before {
+      display: none;
+    }
+    &__caption {
+      display: none;
+    }
+    &__info {
+      margin-right: 30px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__photo {
+      max-height: 318px;
+      max-width: 369px;
+
+      margin-right: 0;
+    }
+    &__pre-photo {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 0 20px 60px;
+    &::before {
+      display: none;
+    }
+    &__caption {
+      display: none;
+    }
+    &__wrap {
+      justify-content: center;
+    }
+    &__info {
+      margin: 0;
+    }
+    &__subtext {
+      display: none;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__photo {
+      display: none;
+      max-height: 318px;
+      max-width: 369px;
+
+      margin-right: 0;
+    }
+    &__pre-photo {
+      display: none;
+    }
+  }
+}

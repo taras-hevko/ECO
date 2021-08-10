@@ -1,0 +1,218 @@
+.creators {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0 150px 203px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    max-width: 1280px;
+    width: 100%;
+  }
+
+  &__caption {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    position: absolute;
+    top: 0;
+    left: 23px;
+
+    color: rgba(52, 79, 16, 0.5);
+
+    transform: rotate(-90deg);
+    &::after {
+      display: inline-block;
+      content: " ";
+      position: absolute;
+      bottom: 50%;
+      right: 110%;
+
+      height: 1px;
+      width: 100px;
+
+      background-color: rgba(52, 79, 16, 0.5);
+    }
+  }
+
+  &__article {
+    max-width: 400px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 47px;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $color-green;
+
+    margin-bottom: 20px;
+  }
+  &__introduction,
+  &__main,
+  &__end {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-text;
+  }
+  &__introduction {
+    margin-bottom: 54px;
+  }
+  &__main {
+    margin-bottom: 30px;
+  }
+  &__end {
+    margin-bottom: 20px;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    padding-bottom: 12px;
+    width: 130px;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $color-green;
+
+    margin-bottom: 63px;
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 80px;
+      height: 1px;
+      background-color: $color-green;
+    }
+    &:hover {
+      transition: all 0.2s linear;
+      opacity: 0.5;
+    }
+  }
+  &__button {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: $color-close-toWhite;
+  }
+
+  &__button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 280px;
+    height: 60px;
+
+    background-color: $color-text;
+    cursor: pointer;
+    transition: 0.3s linear;
+    &:hover {
+      border: 1px solid $color-text;
+      background-color: $color-background;
+    }
+    &:hover .creators__button {
+      color: $color-text;
+    }
+  }
+
+  &__photo {
+    max-width: 580px;
+    max-height: 669px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+      transform: translateX(-40px);
+    }
+  }
+}
+
+@media (min-width: 888px)  and (max-width:1500px) {
+  .creators {
+    padding: 0 27px 115px;
+    &__caption {
+      display: none;
+    }
+    &__end {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 700px)  and (max-width:887px) {
+  .creators {
+    padding: 0 27px 115px;
+    &__container {
+      gap: 50px;
+      justify-content: center;
+    }
+    &__caption {
+      display: none;
+    }
+    &__end {
+      display: none;
+    }
+    &__photo {
+      width: 368px;
+      height: 425px;
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .creators {
+    justify-content: space-between;
+    padding: 0 20px 60px;
+    &__caption {
+      display: none;
+    }
+    &__end {
+      display: none;
+    }
+    &__photo {
+      display: none;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+
+      margin-bottom: 12px;
+    }
+    &__introduction,
+    &__main {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__introduction {
+      margin-bottom: 36px;
+    }
+    &__main {
+      margin-bottom: 44px;
+    }
+    &__link {
+      margin-bottom: 30px;
+    }
+  }
+}

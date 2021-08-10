@@ -1,0 +1,195 @@
+.contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 150px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+  }
+  &__caption {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    position: absolute;
+    top: 0;
+    left: 83px;
+
+    color: rgba(52, 79, 16, 0.5);
+
+    transform: rotate(-90deg);
+    &::after {
+      display: inline-block;
+      content: " ";
+      position: absolute;
+      bottom: 50%;
+      right: 110%;
+
+      height: 1px;
+      width: 100px;
+
+      background-color: rgba(52, 79, 16, 0.5);
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+
+    text-transform: capitalize;
+
+    color: $color-green;
+
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    display: block;
+    max-width: 380px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+
+    text-transform: lowercase;
+
+    color: $color-text;
+
+    margin-bottom: 20px;
+  }
+
+  &__inputs-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+  }
+  &__input-message {
+    resize: none;
+    margin-bottom: 50px;
+  }
+
+  &__input,
+  &__input-message {
+    outline: none;
+    max-width: 342px;
+
+    font-family: "Maven Pro", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: capitalize;
+
+    color: #828282;
+    background-color: $color-background;
+    padding-bottom: 10px;
+
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    &::placeholder {
+      font-family: "Maven Pro", sans-serif;
+      font-size: 18px;
+      line-height: 27px;
+      text-transform: capitalize;
+    }
+    &:focus {
+      border-bottom: 1px solid $color-text;
+    }
+    &:hover {
+      border-bottom: 1px solid $color-text;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    width: 280px;
+    height: 60px;
+
+    color: $color-close-toWhite;
+    background-color: $color-text;
+    cursor: pointer;
+    transition: 0.3s linear;
+    &:hover {
+      border: 1px solid $color-text;
+      background-color: $color-background;
+      color: $color-text;
+    }
+  }
+}
+
+@media (min-width: 1201px)  and (max-width:1500px) {
+  .contact {
+    padding: 0 27px 115px;
+    &__caption {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  .contact {
+    padding: 0 0 100px 27px;
+    &__container {
+      gap: 30px;
+    }
+    &__caption {
+      display: none;
+    }
+    &__photo {
+      max-width: 368px;
+      max-height: 409px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__subtitle {
+      max-width: 342px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .contact {
+    padding: 0 20px 60px;
+    &__caption {
+      display: none;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__subtitle {
+      max-width: 342px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__photo {
+      display: none;
+    }
+  }
+}
